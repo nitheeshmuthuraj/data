@@ -1,15 +1,7 @@
-            directory = '/Users/ASUuser/Desktop/CSE572_A2_data';      % Full path of the directory to be searched in
-            filesAndFolders = dir(directory);     % Returns all the files and folders in the directory
-            filesInDir = filesAndFolders(~([filesAndFolders.isdir]));  % Returns only the files in the directory
-            for i=3:length(filesAndFolders)
-                cd (filesAndFolders(i).name)
-                movefile *.csv /Users/ASUuser/Desktop/CSE572_A2_data
-                cd ..
-                rmdir(filesAndFolders(i).name)
-            end
-            del=["aboout*","large*","if*","hurt*","hospit*","gold*","gestur*","day*","cost*","cat*","good*","here*"]
+            
+            del=["*aboout*","*large*","*if*","*hurt*","*hospit*","*gold*","*gestur*","*day*","*cost*","*cat*","*good*","*here*"]
             for i=1:length(del)
-                delete (del(i))
+                delete (char(del(i)))
                 delete (char(upper(del(i))))
             end            
             
