@@ -1,6 +1,16 @@
             directory = '/Users/ASUuser/Desktop/CSE572_A2_data';      % Full path of the directory to be searched in
             filesAndFolders = dir(directory);     % Returns all the files and folders in the directory
             filesInDir = filesAndFolders(~([filesAndFolders.isdir]));  % Returns only the files in the directory
+            rmdir(DM36) 
+            rmdir(DM01)
+            rmdir(DM25)
+            rmdir(DM33)
+            rmdir(DM03)
+            rmdir(DM08) 
+            rmdir(DM12) 
+            rmdir(DM24)
+            rmdir(DM14)
+            rmdir(DM37)
             for i=3:length(filesAndFolders)
                 cd (filesAndFolders(i).name)
                 movefile *.csv /Users/ASUuser/Desktop/CSE572_A2_data
