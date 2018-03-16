@@ -6,7 +6,7 @@ for j=1:length(sensor_names)
         file_name=strcat(names_class(i),'.csv');
         M=csvread(file_name);
         figure_name=strcat(sensor_names(j),'.jpg');        
-        temp=M(j:35:350,:);
+        temp=M(j:700:10500,:);
         temp=transpose(temp);
         subplot(2,5,i)
         plot(temp)   
